@@ -1,0 +1,58 @@
+
+
+Last login: Tue Oct 25 15:51:39 on ttys000
+duong@DUONGs-MacBook-Pro udacity % ssh -i "keypair-primary.cer" ec2-user@ec2-52-55-96-223.compute-1.amazonaws.com
+ssh: connect to host ec2-52-55-96-223.compute-1.amazonaws.com port 22: Operation timed out
+duong@DUONGs-MacBook-Pro udacity % ssh -i "keypair-primary.cer" ec2-user@ec2-54-205-216-88.compute-1.amazonaws.com
+The authenticity of host 'ec2-54-205-216-88.compute-1.amazonaws.com (54.205.216.88)' can't be established.
+ED25519 key fingerprint is SHA256:7cHROXrcdYNT6Q5x1bmHU/zPG4hThSkoV8rQ7Ulp1E8.
+This host key is known by the following other names/addresses:
+    ~/.ssh/known_hosts:5: ec2-52-55-96-223.compute-1.amazonaws.com
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ec2-54-205-216-88.compute-1.amazonaws.com' (ED25519) to the list of known hosts.
+Last login: Tue Oct 25 08:51:49 2022 from 58.186.7.188
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+13 package(s) needed for security, out of 16 available
+Run "sudo yum update" to apply all updates.
+-bash: warning: setlocale: LC_CTYPE: cannot change locale (UTF-8): No such file or directory
+[ec2-user@ip-10-1-10-210 ~]$ mysql -u admin -h primary-database-replica.creffmgq0tor.us-east-1.rds.amazonaws.com -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 103
+Server version: 8.0.28 Source distribution
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE dbudacity;
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| dbudacity          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> use dbudacity;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> insert into student (fullname, age) values ('Nam', 30);
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+mysql> 

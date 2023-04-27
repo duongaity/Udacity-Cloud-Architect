@@ -1,0 +1,14 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+
+All the S3 buckets have no server-side encryption enabled.
+Amazon S3 supports the HTTPS protocol, which encrypts data in transit to and from Amazon S3. 
+We should enable default encryption on your bucket with SSE-S3 or SSE-KMS.
+
+
+# Poor practice 2
+
+WebAppSG, AppLoadBalancerSG, AttackInstanceSG defined as 0.0.0.0/0.
+We should add rules that control the traffic based on protocols and port numbers,
+sets of rules for inbound traffic and outbound traffic.

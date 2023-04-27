@@ -1,0 +1,30 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+
+- Regula
+
+### Example vulnerability
+
+- Regula is a tool that evaluates infrastructure as code files for potential AWS, Azure, Google Cloud, 
+and Kubernetes security and compliance violations prior to deployment.
+
+## Scan AMI’s or containers for OS vulnerabilities
+
+- Clair
+- Anchore
+- Docker Bench
+
+### Example vulnerability
+
+- Inspection and analytics platform that enables operators to analyze, inspect, perform security scans, and evaluate custom policies against container images.
+
+## Scan an AWS environment for cloud configuration vulnerabilities
+
+- AWS Config
+- Amazon Inspector
+
+### Example vulnerability
+- Checks that the EBS, S3 volumes are encrypted
+- Checks that the S3 with permission do not allow public read/write access
+

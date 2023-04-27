@@ -1,0 +1,23 @@
+﻿Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,18527.420000000002,222329.04,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+Increased_Cost_Estimate,US East (N. Virginia),,Amazon EC2,0,10626.3,127515.60,USD,"Operating system (Linux), Quantity (6), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage amount (6 TB), Instance type (c5.12xlarge), Provisioning IOPS io1 (1000)"
+Increased_Cost_Estimate,US East (N. Virginia),,VPN Connection,0,0,0.00,USD,Working days per month (22)
+Increased_Cost_Estimate,US East (N. Virginia),,Network Address Translation (NAT) Gateway,0,78.93,947.16,USD,Number of NAT Gateways (1)
+Increased_Cost_Estimate,US East (N. Virginia),,Application Load Balancer,0,319.57000000000005,3834.84,USD,Number of Application Load Balancers (2)
+Increased_Cost_Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,6566.56,78798.72,USD,"Storage for each RDS instance (Provisioned IOPS SSD (io1)), Storage amount (2 TB), Additional backup storage (10 TB), Provisioning IOPS (1000), Quantity (2), Instance type (db.m5.4xlarge), Deployment option (Multi-AZ), Utilization (On-Demand only) (100 %Utilized/Month), Pricing strategy (OnDemand)"
+Increased_Cost_Estimate,US East (N. Virginia),,S3 Standard,0,235.52,2826.24,USD,S3 Standard storage (10 TB per month)
+Increased_Cost_Estimate,US East (N. Virginia),,Data Transfer,0,0,0.00,USD,
+Increased_Cost_Estimate,US East (N. Virginia),,Amazon CloudFront,0,215.04,2580.48,USD,"Data transfer out to internet (2 TB per month), Data transfer out to origin (2 TB per month), Number of requests (HTTPS) (0 million per month)"
+Increased_Cost_Estimate,US East (N. Virginia),,Amazon Route 53,0,25,300.00,USD,
+Increased_Cost_Estimate,US East (N. Virginia),,Amazon API Gateway,0,460.5,5526.00,USD,"HTTP API requests units (millions), Average size of each request (512 KB), REST API request units (millions), Cache memory size (GB) (None), WebSocket message units (thousands), Average message size (32 KB), Requests (100 per month), Requests (103 per month)"
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."

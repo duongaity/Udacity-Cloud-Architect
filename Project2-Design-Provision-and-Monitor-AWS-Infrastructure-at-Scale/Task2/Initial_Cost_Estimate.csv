@@ -1,0 +1,22 @@
+﻿Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,8021.719999999999,96260.64,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+Initial_Cost_Estimate,US East (N. Virginia),,Amazon EC2,0,2302.56,27630.72,USD,"Operating system (Linux), Quantity (4), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage amount (2 TB), Instance type (r6g.4xlarge)"
+Initial_Cost_Estimate,Europe (Frankfurt),,VPN Connection,0,0,0.00,USD,Working days per month (22)
+Initial_Cost_Estimate,Europe (Frankfurt),,Network Address Translation (NAT) Gateway,0,91.21,1094.52,USD,Number of NAT Gateways (1)
+Initial_Cost_Estimate,US East (N. Virginia),,Application Load Balancer,0,73.81,885.72,USD,Number of Application Load Balancers (2)
+Initial_Cost_Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,2789.5,33474.00,USD,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (1 TB), Additional backup storage (10 TB), Quantity (1), Instance type (db.m4.4xlarge), Deployment option (Multi-AZ), Utilization (On-Demand only) (100 %Utilized/Month), Pricing strategy (Reserved 1yr No Upfront)"
+Initial_Cost_Estimate,US East (N. Virginia),,S3 Standard,0,47.1,565.20,USD,S3 Standard storage (2 TB per month)
+Initial_Cost_Estimate,US East (N. Virginia),,Data Transfer,0,0,0.00,USD,
+Initial_Cost_Estimate,US East (N. Virginia),,Amazon CloudFront,0,217.04,2604.48,USD,"Data transfer out to internet (2 TB per month), Data transfer out to origin (2 TB per month), Number of requests (HTTPS) (2 million per month)"
+Initial_Cost_Estimate,US East (N. Virginia),,Amazon Route 53,0,2500.5,30006.00,USD,Hosted Zones (1)
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."

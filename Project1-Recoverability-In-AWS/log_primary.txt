@@ -1,0 +1,66 @@
+[root@ip-10-1-10-210 ec2-user]# mysql --version
+mysql  Ver 14.14 Distrib 5.7.40, for Linux (x86_64) using  EditLine wrapper
+[root@ip-10-1-10-210 ec2-user]# mysql -u admin -h primary-database.creffmgq0tor.us-east-1.rds.amazonaws.com -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 24
+Server version: 8.0.28 Source distribution
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show databases
+    -> ;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql> CREATE DATABASE dbudacity;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| dbudacity          |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> create table student(fullname varchar(250) not null, age integer);
+ERROR 1046 (3D000): No database selected
+mysql> use dbudacity;
+Database changed
+mysql> create table student(fullname varchar(250) not null, age integer);
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> insert into student (fullname, age) values ('Duong', 25);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into student (fullname, age) values ('Tung', 28);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from student;
++----------+------+
+| fullname | age  |
++----------+------+
+| Duong    |   25 |
+| Tung     |   28 |
++----------+------+
+2 rows in set (0.00 sec)
+
+mysql> 

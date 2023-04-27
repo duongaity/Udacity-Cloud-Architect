@@ -1,0 +1,12 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+AttackInstanceSG:
+- Ensure no security groups allow ingress from 0.0.0.0/0 to port 22
+
+WebAppSG:
+- Ensure no security groups allow ingress from 0.0.0.0/0 to port 22
+- Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+- Enable encryption on S3 bucket
+- Enable encryption on EC2 volumes
